@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Navi</title>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">link1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">link2</a>
+            </li>
+        </ul>
+        <div class="nav-text">
+            text
+        </div>
+    </nav>
+    <h1>Title</h1>
+    <p>
+        自作のgit
+        hooksを一つのリポジトリだけでなく他のものでも使いたくて、今まではそれぞれのリポジトリにコピーを持っていていました。ただこの方法だと、編集などが加わるとすべて直さなければいけないことや、というか毎度コピーめんどくさいのです。このような背景から自作のgit
+        hooksテンプレート化しかつシンボリックリンク化することにしました。
+    </p>
+    <h2>作業方法</h2>
+    <p>
+        まずhomeにテンプレートとして使うディレクトリと、リンク先にするhooksのディレクトリを作成します。
+
+        ```sh
+        $ mkdir ~/.git_template
+        $ mkdir ~/.git_hooks
+        ```
+
+        ディレクトリの作成ができたら実際にテンプレートにしたいhooksのプログラムを`.git_hooks`に移動させます。
+        ここで、他の安全なところで`git init`を行い
+        （またはすでに`.git`があるところからでも可）、これによってできた`.git/hooks`の中身を`.git_hooks`に移動させておくと新しいhooksを作るときに楽かもです。
+        ```sh
+        # .gitが存在するディレクトリにて
+        $ cp -r .git/hooks ~/.git_hooks
+        ```
+
+        そして今回のターゲットである自作hooksを.git_hooksに移動させ、実行ができるように権限を変えておきます。
+
+        ```sh
+        $ chmod 755 `作ったfilepath`
+        ```
+        ここまでできたら`~/.git_template`下にhooksとして配置するようにシンボリックリンクを作成します。
+
+        ```sh
+        $ ln -s ~/.git_hooks ~./git _template/hooks
+        ```
+
+        シンボリックリンクができたら最後にテンプレートのディレクトリとして登録を行いましょう。
+
+        ```sh
+        $ git config --global init.templatedir '~/.git_template'
+        ```
+
+        このコマンドを実行すると`.gitconfig`に
+        ```text
+        [init]
+        templatedir = ~/.git_template
+        ```
+        が追加されているはずです。
+
+        あとは新しく作ったリポジトリで試してみましょう。
+
+        ## まとめ
+        またひとつ環境改善ができて良かったです。ちょいちょいこういった環境改善をしていければいいですね。。！
+
+    </p>
+    1234567890
+</div>
+</body>
+</html>
