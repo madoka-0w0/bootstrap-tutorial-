@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Popover</title>
+</head>
+<body>
+
+<div class="container">
+    top におくと見切れるので下や右などに移動する
+    <a href="#" data-toggle="popover" title="Popover Header" data-placement="top" data-content="top">top</a>
+    <h2>Popover</h2>
+
+    <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle
+        popover</a>
+
+    <h3>data-placement</h3>
+    <a href="#" data-toggle="popover" title="Popover Header" data-placement="top" data-content="top">top</a>
+    <a href="#" data-toggle="popover" title="Popover Header" data-placement="right" data-content="right">right</a>
+    <a href="#" data-toggle="popover" title="Popover Header" data-placement="bottom" data-content="bottom">bottom</a>
+    <a href="#" data-toggle="popover" title="Popover Header" data-placement="left" data-content="left">left</a>
+
+    <h3>close</h3>
+    <!--なんかサファリだと出ない、、？-->
+    <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
+
+    <h3>hover</h3>
+    <a href="#" data-toggle="popover" title="Popover Header" data-trigger="hover" data-content="hover">hover</a>
+
+    <!--下は必須-->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</div>
+</body>
+</html>

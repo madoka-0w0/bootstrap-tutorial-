@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Toast</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Toast</h2>
+    <div class="toast">
+        <div class="toast-header">
+            <h3>toast header</h3>
+        </div>
+        <div class="toast-body">
+            toast body
+        </div>
+    </div>
+    <h3>data-autohide="false"</h3>
+    <div class="toast" data-autohide="false">
+        <div class="toast-header">
+            <h3>toast header</h3>
+            <button type="button" class="close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            toast body
+        </div>
+    </div>
+    <!--以下は必須-->
+    <script>
+        $(document).ready(function () {
+            $('.toast').toast('show');
+        });
+    </script>
+</div>
+</body>
+</html>

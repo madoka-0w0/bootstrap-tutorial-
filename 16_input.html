@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Input</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Input</h2>
+    <h3>テキスト入力 (横広がりする)</h3>
+
+    <div class="form-group">
+        <label for="usr">Username</label>
+        <input type="text" class="form-control" id="usr">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password">
+        <label for="comment">Comment</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+
+    <h3>checkbox</h3>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">checkbox1
+        </label>
+    </div>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">checkbox2
+        </label>
+    </div>
+
+
+    <h3>checkbox inline</h3>
+    <div class="form-check-inline">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">checkbox1
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">checkbox2
+            </label>
+        </div>
+    </div>
+
+
+    <h3>radio button</h3>
+    checkboxに対してinput.typeを変更, name追加しただけ。
+    <div class="form-check-inline">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="radio1">checkbox1
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="radio1">checkbox2
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="radio1" disabled>checkbox2
+            </label>
+        </div>
+    </div>
+
+
+    <h3>select list</h3>
+    <div class="form-group">
+        <select class="form-control" id=sel1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+
+
+    <h3>select list multi</h3>
+    <div class="form-group">
+        <select multiple class="form-control" id=sel2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+
+    <h3>form control sizing</h3>
+    <input type="text" class="form-control form-control-sm" placeholder="form-control-sm">
+    <input type="text" class="form-control" placeholder="default">
+    <input type="text" class="form-control form-control-lg" placeholder="form-control-lg">
+
+    <h3>plain text</h3>
+    <div class="form-group">
+        <input type="text" class="form-control-plaintext" placeholder="plaintext">
+    </div>
+
+    <h3>range</h3>
+    <div class="form-group">
+        <input type="range" class="form-control-range">
+    </div>
+
+    <h3>file upload</h3>
+    <div class="form-group">
+        <input type="file" class="form-control-file border">
+    </div>
+
+    <h2>Input Group</h2>
+    <h3>input group</h3>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="address">
+        <div class="input-group-append">
+            <span class="input-group-text">@example.com</span>
+
+        </div>
+    </div>
+
+
+    <h3>input group sizing</h3>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+    <div class="input-group input-group-lg mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+
+    <h3>multi input</h3>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">text</span>
+        </div>
+        <input type="text" class="form-control" placeholder="first name">
+        <input type="text" class="form-control" placeholder="last name">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">text1</span>
+            <span class="input-group-text">text2</span>
+            <span class="input-group-text">text3</span>
+        </div>
+        <input type="text" class="form-control" placeholder="text">
+    </div>
+
+    <h3>input group checkbox and radio</h3>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox">
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="text">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="radio">
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="text">
+    </div>
+
+    <h3>input group button</h3>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="text">
+        <div class="input-group-append">
+            <button class="btn btn-primary">Go</button>
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+
+    <h3>dropdown</h3>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-cecondary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">link1</a>
+                <a class="dropdown-item" href="#">link2</a>
+                <a class="dropdown-item" href="#">link3</a>
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+
+    <h3>input group label</h3>
+    <label for="demo">input group label</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" id="demo">
+    </div>
+
+    <h2>Custom Control</h2>
+    <h3>checkbox radio</h3>
+    <div class="custom-control custom-checkbox">
+        <!--input と　labelが逆だとなぜかcheckができない-->
+        <input type="checkbox" class="custom-control-input" id="customCheck" name="customCheck">
+        <label class="custom-control-label" for="customCheck">checkbox1</label>
+    </div>
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customCheck2" name="customCheck">
+        <label class="custom-control-label" for="customCheck2">checkbox1</label>
+    </div>
+
+    <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customRadio" name="customRadio">
+        <label class="custom-control-label" for="customRadio">radio1</label>
+    </div>
+
+
+    <h3>select menu</h3>
+    <form>
+        <select class="custom-select custom-select-sm" name="customSelect">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+        </select>
+    </form>
+    <form>
+        <select class="custom-select" name="customSelect">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+        </select>
+    </form>
+    <form>
+        <select class="custom-select custom-select-lg" name="customSelect">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+        </select>
+    </form>
+
+
+    <h3>range</h3>
+    <form>
+        <label for="customRange">custom range label</label>
+        <input type="range" class="custom-range" id="customRange">
+    </form>
+
+    <h3>file upload</h3>
+    <form>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label for="customFile" class="custom-file-label">custom file label</label>
+        </div>
+    </form>
+</div>
+</body>
+</html>

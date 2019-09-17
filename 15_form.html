@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Form</title>
+</head>
+<body>
+
+<div class="container">
+    <form action="#">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="from-check-input"> Remember me
+            </label>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    inline
+    <form action="#">
+        <div class="form-inline">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email">
+            <label for="password" class="mr-sm-2">Password</label>
+            <input type="password" class="form-control" id="password">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="from-check-input"> Remember me
+                </label>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    validation
+    <form action="#" class="was-validated">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please fill out this password field.</div>
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="from-check-input"> Remember me
+            </label>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
